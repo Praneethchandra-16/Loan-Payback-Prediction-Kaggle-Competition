@@ -96,30 +96,33 @@ submission = pd.DataFrame({
 })
 
 submission.to_csv("submissions/submission_final_xgb.csv", index=False)
-**## 7. Explainability (SHAP)**
 
-Top predictors:
 
-debt_to_income_ratio
+## 7. Explainability (SHAP)
 
-credit_score
+Top predictors influencing the model:
 
-is_unemployed
+- debt_to_income_ratio  
+- credit_score  
+- is_unemployed  
+- dti_x_interest  
+- grade_letter_ord  
 
-dti_x_interest
+SHAP plots were used to interpret the model at both global and individual prediction levels.
 
-grade_letter_ord
+---
 
-SHAP plots were used for both global and local interpretability.
+## 8. How to Run
 
-**8. How to Run**
+Clone the repository:
+
+```bash
 git clone https://github.com/<your-username>/kaggle-loan-default-s5e11.git
 cd kaggle-loan-default-s5e11
 pip install -r requirements.txt
 jupyter notebook notebooks/Loan_Payback_ML.ipynb
 
-
-The notebook performs:
+The notebook will execute:
 
 EDA
 
@@ -129,26 +132,23 @@ Model training
 
 Validation
 
-Submission file creation
+Submission file generation
 
-9. Future Enhancements
+## 9. Future Enhancements
 
-LightGBM / CatBoost models
+- LightGBM and CatBoost experiments  
+- Cross-validation ensembling  
+- Target encoding for high-cardinality features  
+- Probability calibration  
+- Fairness and bias evaluation  
 
-Cross-validation ensembling
+---
 
-Target encoding improvements
+## About Me
 
-Probability calibration
+I am **Praneeth Chandra Budala**, a Data Science and Artificial Intelligence practitioner with hands-on experience in machine learning, NLP, cloud data engineering, and end-to-end ML solution development across Azure, AWS, Databricks, and Oracle Fusion.
 
-Fairness evaluation
+**LinkedIn:** https://www.linkedin.com/in/praneeth-chandra-budala  
+**GitHub:** https://github.com/Praneethchandra-16  
+**Portfolio:** https://praneeths-ai-career.lovable.app
 
-About Me
-
-I am Praneeth Chandra Budala, a Data Science and Artificial Intelligence practitioner with hands-on experience in machine learning, NLP, cloud data engineering, and end-to-end ML solution development across Azure, AWS, Databricks, and Oracle Fusion.
-
-LinkedIn: https://www.linkedin.com/in/praneeth-chandra-budala
-
-GitHub: https://github.com/Praneethchandra-16
-
-Portfolio: https://praneeths-ai-career.lovable.app

@@ -98,29 +98,8 @@ SHAP plots were used to interpret the model at both global and individual predic
 
 ---
 
-## 8. How to Run
 
-Clone the repository:
-
-```bash
-git clone https://github.com/<your-username>/kaggle-loan-default-s5e11.git
-cd kaggle-loan-default-s5e11
-pip install -r requirements.txt
-jupyter notebook notebooks/Loan_Payback_ML.ipynb
-
-The notebook will execute:
-
-EDA
-
-Feature engineering
-
-Model training
-
-Validation
-
-Submission file generation
-
-## 9. Future Enhancements
+## 8. Future Enhancements
 
 - LightGBM and CatBoost experiments  
 - Cross-validation ensembling  

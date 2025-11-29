@@ -76,26 +76,12 @@ Implemented via scikit-learn `Pipeline` + `ColumnTransformer`:
 ### Final Model Training
 Full training data was used with tuned hyperparameters.
 
-Saved model:
-```python
-from joblib import dump
-dump(final_pipeline, "models/final_xgb_pipeline.joblib")
 **## 6. Evaluation
 ### ROC-AUC Results**
 
 Training ROC-AUC: ~0.927
 
 Validation ROC-AUC: ~0.926
-
-Kaggle Submission
-test_proba = final_pipeline.predict_proba(X_test)[:, 1]
-
-submission = pd.DataFrame({
-    "id": test["id"],
-    "loan_paid_back": test_proba
-})
-
-submission.to_csv("submissions/submission_final_xgb.csv", index=False)
 
 
 ## 7. Explainability (SHAP)
